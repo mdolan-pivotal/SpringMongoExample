@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,7 @@ public class MikesMongoDemoApplication {
 		SpringApplication.run(MikesMongoDemoApplication.class, args);
 	}
 }
-
+@EnableOAuth2Sso
 @RestController
 class PersonRestController {
 	@RequestMapping("/people")
