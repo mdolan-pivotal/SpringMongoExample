@@ -20,7 +20,6 @@ public class MikesMongoDemoApplication {
 		SpringApplication.run(MikesMongoDemoApplication.class, args);
 	}
 }
-@EnableOAuth2Sso
 @RestController
 class PersonRestController {
 	@RequestMapping("/people")
